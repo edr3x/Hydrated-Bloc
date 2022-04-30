@@ -16,13 +16,11 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> with HydratedMixin {
 
   @override
   CounterState? fromJson(Map<String, dynamic> json) {
-    // TODO: implement fromJson
-    throw UnimplementedError();
+    return CounterState.fromMap(json);
   }
 
   @override
   Map<String, dynamic>? toJson(CounterState state) {
-    // TODO: implement toJson
-    throw UnimplementedError();
+    return state.toMap();
   }
 }
